@@ -103,12 +103,12 @@ a {
 
 
 .logo {
-    width: 140px;
+    width: 180px;
     height: auto;
 }
 
 .logoBottom   {
-    width: 195px; /* Set the width of the specific image */
+    width: 205px; /* Set the width of the specific image */
     height: auto; /* Maintain aspect ratio */
     opacity: 100%;
     margin-top: 10px;
