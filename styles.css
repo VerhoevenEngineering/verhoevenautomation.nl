@@ -103,24 +103,25 @@ a {
 
 
 .logo {
-    width: 180px;
+    width: 130px;
     height: auto;
 }
 
 .logoBottom   {
-    width: 205px; /* Set the width of the specific image */
+    width: 110px; /* Set the width of the specific image */
     height: auto; /* Maintain aspect ratio */
-    opacity: 100%;
+    opacity: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 6px;
+    margin-right: 0px;
     margin-left: 5px;
     filter: grayscale(1);
 }
 
 .amerikaanseprojectie {
-    width: 100px;
+    width: 70px;
     height: auto;
+    margin-left: 5px ;
 }
 
 #bold {
