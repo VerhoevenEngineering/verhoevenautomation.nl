@@ -9,39 +9,40 @@ var formattedDate = currentDate.toLocaleDateString('nl-NL', options); // Example
 document.getElementById("currentDate").innerHTML = formattedDate;
 
 function displayScreenSize() {
-        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
-        document.getElementById('screenSize').innerHTML =  width + " * <br> &nbsp &nbsp  " + height + " px";
-    };
+    document.getElementById('screenSize').innerHTML =  width + " * <br> &nbsp &nbsp  " + height + " px";
+}
 
-    // Display screen size on page load
-    window.onload = function() {
-        displayScreenSize();
-    };
+// Update screen size when window is resized
+window.onresize = function() {
+    displayScreenSize();
+}
 
-    // Update screen size when window is resized
-    window.onresize = function() {
-        displayScreenSize();
-    };
+// Alternatief voor a href in de navbar bovenin
+function navigateTo(url) {
+    window.location.href = url;
+}
 
-    //alternatief voor a href in de navbar bovenin
-    function navigateTo(url) {
-        window.location.href = url;
-    };
-
-
+// Combineer beide functies in één `window.onload`
 window.onload = function() {
+    // Toon de schermgrootte bij het laden van de pagina
+    displayScreenSize();
+
     // Selecteer de afbeelding en de elementen waar de afmetingen worden getoond
     const img = document.getElementById('image');
     const horizontaleAfmeting = document.querySelector('.horizontale-waarde');
     const verticaleAfmeting = document.querySelector('.verticale-waarde');
 
-    // Haal de werkelijke breedte en hoogte van de afbeelding op
-    const breedte = img.naturalWidth;
-    const hoogte = img.naturalHeight;
+    // Controleer of de afbeelding bestaat om fouten te voorkomen
+    if (img) {
+        // Haal de werkelijke breedte en hoogte van de afbeelding op
+        const breedte = img.naturalWidth;
+        const hoogte = img.naturalHeight;
 
-    // Stel de afmetingsteksten in
-    horizontaleAfmeting.innerText = `${breedte} px`;
-    verticaleAfmeting.innerText = `${hoogte} px`;
-};
+        // Stel de afmetingsteksten in
+        horizontaleAfmeting.innerText = `${breedte} px`;
+        verticaleAfmeting.innerText = `${hoogte} px`;
+    }
+}
