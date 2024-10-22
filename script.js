@@ -29,3 +29,19 @@ function displayScreenSize() {
     function navigateTo(url) {
         window.location.href = url;
     };
+
+
+window.onload = function() {
+    // Selecteer de afbeelding en de elementen waar de afmetingen worden getoond
+    const img = document.getElementById('image');
+    const horizontaleAfmeting = document.querySelector('.horizontale-waarde');
+    const verticaleAfmeting = document.querySelector('.verticale-waarde');
+
+    // Haal de werkelijke breedte en hoogte van de afbeelding op
+    const breedte = img.naturalWidth;
+    const hoogte = img.naturalHeight;
+
+    // Stel de afmetingsteksten in
+    horizontaleAfmeting.innerText = `${breedte} px`;
+    verticaleAfmeting.innerText = `${hoogte} px`;
+};

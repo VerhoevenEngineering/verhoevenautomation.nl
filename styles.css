@@ -12,18 +12,18 @@ body, html {
 
 #content {
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: left;
     width: 80%; /* Width of the intro text */
     color: black; /* Text color set to black */
-  font-family: Poppins, sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 14px;
 }
 
 table, th, td {
-  border: 2px solid;
+    border: 2px solid;
     border-collapse: collapse;
     font-family: din-6776, Arial, sans-serif;
 }
@@ -39,8 +39,6 @@ table {
     top:0px;
     font-size: 15px;
 }
-
-
 
 #leftTable {
 width: calc(100vh - 56px);
@@ -101,21 +99,18 @@ a {
     text-decoration: none; /* Remove the underline */
 }
 
-
 .logo {
     width: 130px;
     height: auto;
 }
 
 .logoBottom   {
-    width: 110px; /* Set the width of the specific image */
+    width: 118px; /* Set the width of the specific image */
     height: auto; /* Maintain aspect ratio */
-    opacity: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 0px;
-    margin-left: 5px;
-    filter: grayscale(1);
+    margin-right: 3px;
+    margin-left: 3px;
 }
 
 .amerikaanseprojectie {
@@ -200,14 +195,6 @@ a:hover {
     color: #535353; /* Change the color on hover */
 }
 
-.klimrobot {
-    position: fixed;
-    top:120px;
-    right: 40px;
-    width: 900px;
-    height: auto;
-}
-
 /* Navbar mobiel */
 #navBarMobile {
     text-align: top;
@@ -245,4 +232,131 @@ a:hover {
 
 .contact-form button:hover {
     background-color: #535353 ;
+}
+
+
+.afmeting {
+    position: relative;
+    display: inline-block;
+    border: 2px solid black; /* Dikkere grijze rand */
+    margin: 0; /* Geen extra witruimte */
+}
+
+.afmeting img {
+    display: block;
+    max-width: 100%;
+    margin: 0; /* Verwijder standaard marges */
+}
+
+/* Algemene stijl voor de afmetingselementen */
+.afmetingen {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Horizontale pijl styling */
+.horizontaal {
+    bottom: -30px; /* Plaats de pijl onder de afbeelding */
+    left: 0;
+    width: 100%; /* Strek over de hele breedte van de afbeelding */
+}
+
+/* Horizontale pijl */
+#horizontal-arrow {
+    width: 95%;
+    height: 2px; /* Lijndikte */
+    background-color: #333; /* Kleur van de lijn */
+    position: relative;
+}
+
+#horizontal-arrow::before, #horizontal-arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%; /* Zorgt dat de driehoek in het midden zit */
+    transform: translateY(-50%); /* Verplaatst de driehoek verticaal precies naar het midden */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+#horizontal-arrow::before {
+    left: -15px; /* Plaatst de driehoek aan de linkerzijde */
+    border-right: 15px solid #333; /* Linker driehoek */
+}
+
+#horizontal-arrow::after {
+    right: -15px; /* Plaatst de driehoek aan de rechterzijde */
+    border-left: 15px solid #333; /* Rechter driehoek */
+}
+
+/* Verticale pijl styling */
+.verticaal {
+    top: 0;
+    left: calc(100% + 30px); /* Plaats de pijl net naast de afbeelding */
+    height: 100%; /* Strek over de hele hoogte */
+}
+
+/* Verticale pijl */
+#vertical-arrow {
+    height: 92%;
+    width: 2px; /* Lijndikte */
+    background-color: #333; /* Kleur van de lijn */
+    position: relative;
+}
+
+#vertical-arrow::before, #vertical-arrow::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Zorgt dat de driehoek in het midden zit */
+    transform: translateX(-50%); /* Verplaatst de driehoek horizontaal precies naar het midden */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+#vertical-arrow::before {
+    top: -15px; /* Plaatst de driehoek aan de bovenkant */
+    border-bottom: 15px solid #333; /* Bovenste driehoek */
+}
+
+#vertical-arrow::after {
+    bottom: -15px; /* Plaatst de driehoek aan de onderkant */
+    border-top: 15px solid #333; /* Onderste driehoek */
+}
+
+/* Afmeting-waarde styling */
+.afmeting-waarde {
+    position: absolute;
+    background-color: #e5e5e5;
+    text-align: center;
+    font-family: din-6776, Arial, sans-serif;
+    font-size: 15px;
+}
+
+
+/* Plaats de afmeting exact op dezelfde lijn als de pijlkoppen */
+.horizontale-waarde {
+    bottom: -9px; /* Plaats op de zelfde hoogte als de horizontale pijl */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 15px;
+}
+
+.verticale-waarde {
+    left: -9px; /* Plaats naast de verticale pijl, uitgelijnd met de kop */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px 0px;
+}
+
+.standaardFormaatAfbeelding {
+    width: 450px;
+    height: auto;
+    position: fixed;
+    top:220px;
+    right: 400px;
 }
