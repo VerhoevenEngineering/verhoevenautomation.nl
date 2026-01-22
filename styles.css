@@ -7,7 +7,6 @@ body, html {
        background-size: cover; /* Cover the entire background */
             background-repeat: no-repeat; /* Do not repeat the background image */
             background-attachment: fixed; /* Keep the background fixed while scrolling */
-
 }
 
 #content {
@@ -81,8 +80,6 @@ width: calc(100vh - 56px);
     transform: rotate(-270deg);
 }
 
-/* navbar hier onder */
-
 #rechterOnderHoek {
     text-align: top left;
     position: fixed;
@@ -100,23 +97,23 @@ a {
 }
 
 .logo {
-    width: 130px;
+    width: 300px;
     height: auto;
 }
 
-.logoBottom   {
-    width: 118px; /* Set the width of the specific image */
+.logoBottom {
+    width: 60px; /* Set the width of the specific image */
     height: auto; /* Maintain aspect ratio */
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 3px;
-    margin-left: 3px;
+    margin-left: 5px;
 }
 
 .amerikaanseprojectie {
     width: 70px;
     height: auto;
-    margin-left: 5px ;
+    margin-left: 5px;
 }
 
 #bold {
@@ -134,7 +131,7 @@ a {
         display: none;
     }
     .logo {
-        width: 80vw;
+        width: 90vw;
         margin-top: -60px;
         margin-bottom: -50px;
         margin-left: -10px;
@@ -144,8 +141,6 @@ a {
     }
 } 
 
-
-
 @media (min-width: 768px) {
     #navBarMobile {
         display: none;
@@ -154,7 +149,7 @@ a {
         display: none;
      }
      .logo {
-    width: 50vh; /* Set the width of the specific image */
+    width: 75vh; /* Set the width of the specific image */
     margin-top: -18vh;
 }
 } 
@@ -168,15 +163,13 @@ a {
         font-family: 'Roboto', sans-serif;
     }
 
-
 .instagram {
     width: 16px;
     height: auto;
 }
 
 .menuItem {
-     background-color: #c9c9c9
-;
+     background-color: #c9c9c9;
      width: 12.5vw;
 }
 
@@ -189,7 +182,6 @@ a {
     cursor: pointer;
      /* Change the background color on hover */
 }
-
 
 a:hover {
     color: #535353; /* Change the color on hover */
@@ -205,7 +197,6 @@ a:hover {
     font-size: 20px;
     text-align: center;
 }
-
 
 .contact-form label {
     display: block;
@@ -227,13 +218,11 @@ a:hover {
     font-size: 15px;
     cursor: pointer;
     border: 1px solid black;
-
 }
 
 .contact-form button:hover {
-    background-color: #535353 ;
+    background-color: #535353;
 }
-
 
 .afmeting {
     position: relative;
@@ -336,7 +325,6 @@ a:hover {
     font-family: din-6776, Arial, sans-serif;
     font-size: 15px;
 }
-
 
 /* Plaats de afmeting exact op dezelfde lijn als de pijlkoppen */
 .horizontale-waarde {
